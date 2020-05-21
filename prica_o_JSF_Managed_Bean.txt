@@ -1,0 +1,67 @@
+		
+			JSF Java Server Faces (UI web tehnologiju Javu)  Angular, React, Vue
+			- baziran na Servlet tehnologiji
+			- bazni centralni servlet
+			- ManagedBean koji imaju neke anotacije -> SessionBean,MessageDrivenBean
+			- JSF 1.2 faces-config.xml 
+			- JSF 2.0 @anotation
+			- Veci framework -> konvertuje parametre -> security -> validaciju ; xHTML
+			- JSP i Servlet -> JSF OLAKŠICA
+			
+			- Spring MVC -> JSF ima svoj MVC
+			
+			
+			ManagedBean
+			 -> regularana JavaBean objekat registrovan unutar JSF aplikacije
+			 -> 1.2 JSF faces-config.xml
+			 -> 2.2 @
+			 
+			SCOPE ManagedBean
+			Opseg ili ŽIVOTNI VIJEK mabaged bean
+			1. @RequestScoped 
+			   request - response helloWorld -> kreirat i uništit
+			   request - response helloWorld -> kreirat i uništit
+			   1x
+			   
+			2. @NoneScoped -> nigdje se ne kešira unutar JSF nego svaki # ili EL kreira novi HelloWorld 
+				3x 
+			3. @ViewScoped -> on živi sve dok se korisnik nalazi na istom PROZORU ili EKRANU ili TABU
+				- na drugi xHTML 
+				
+			4. @SessionScoped
+			   - vežu se za sesiju i žive ti objekti sve dok smo u sesiji logovani a uništavaju kada mi 
+			   ukinemo sesiju 
+			5. @ApplicationScoped
+			    - prvi zahtjev kada dođe kreira se ovaj ManagedBean i živi on sve dok je aplikacija aktivna
+				
+				
+				
+		    ManagedProperty 
+			@ManagedProperty -> kada hoćemo jedan ManagedBean ubaciti kao property unutar durgog ManagedBean
+			
+			
+			JSF navigacija
+			
+			View na View
+			1.2 JSF faces-config.xml
+			2.2 Implicitna navigacija
+			
+			Implicitna navigacija
+			JSF 2.2
+			AUTO RESOLVE -> auto view page resolver
+			
+			
+			action -> "drugiSajt"
+			action -> "#navigationController.moveToWebShop()"
+			USLOVNA NAVIGACIJA
+			
+			
+			NOTE: NE SMIJEMO pozivati BEAN kraćeg SCOPE opsega od onoga Scope opsega u koji injektujemo taj bean kroz ManagedProperty
+			
+			
+			<h:tagovi -> Pomoću ovih tagova crtamo UI
+			<f:tagovi -> kada radim oneku logiku odnosno maloprije smo proslijeđivali beanu parametre is JSF page 
+			
+			
+			 
+			   
